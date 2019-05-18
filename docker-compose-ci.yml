@@ -18,3 +18,8 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
         depends_on:
             - jenkins
+    node-app:
+        container_name: jenkins-docker-node-webapp
+        build: app/
+        ports:
+            - '7010:8080'
