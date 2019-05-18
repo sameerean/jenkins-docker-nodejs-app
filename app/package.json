@@ -1,0 +1,13 @@
+{
+  "name": "jenkins-docker-nodejs-app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker built by Jenkins",
+  "author": "Shameer Kunjumohamed <sameerean@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
