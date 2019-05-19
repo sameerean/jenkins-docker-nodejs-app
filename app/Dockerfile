@@ -12,10 +12,13 @@ RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 
-# Bundle app source
-COPY . .
+ARG DEPLOY_PATH=.
 
-VOLUME $pwd:/usr/src/app
+# Bundle app source
+COPY $DEPLOY_PATH .
+
+#VOLUME $pwd:/usr/src/app
+#VOLUME ~/apps-deploy/jenkins-docker-nodejs-app:/usr/src/app
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
